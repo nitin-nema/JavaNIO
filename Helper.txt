@@ -1,0 +1,41 @@
+Buffers - container that hold the data being read or written
+Channels -represent connections to entities like files,socket or harware device for reading/writing data
+Selectors - used for multiplexing IO, allowing one thread to manage multiple chananel
+Stream oriented - data will flow one byte at a time
+
+BuffredReader- Buffers characters to provide efficent reading of text, especailly from line or other chacheter stream
+fileReader- read chacheter files
+
+Buffer Workflow --
+Allocate - specific capacity
+Write mode -
+flip()  -- read
+Read the data from buffer
+Clear/Compact
+____
+
+flip() <--ByteBuffer
+(limit and postion)
+read <----> writing
+
+position - the index of the next elements to be read or wite
+limit- index after the last valid elment
+capacity- maximum allocated memory
+________
+channel
+
+FileChannel - read(),write(), map(), posiition();
+SocketChannel - for TCP socket connections
+DatagramChannel - for UDP connection
+
+uses case of Socketchannel /// TCP -
+1. Web browsing(http or https)
+2. email(SMTP, IMAP)
+3. File transfer (FTP)
+4. Secure connections (SSH,SSL/TLS)
+
+use case of  Datageramcahnnel /// UDP
+1. Streaming media(audio and video)
+2. VoIP - voice over IP
+3. DNS quieries
+4. Online gaming
